@@ -14,7 +14,7 @@ export default function Nav({ active }: { active?: string }) {
     </Link>
   );
   return (
-    <header className="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-4 px-6 py-6">
+    <header className="mx-auto flex max-w-[1400px] flex-wrap items-baseline justify-between gap-4 px-6 py-6">
       <Link href="/" className="font-display text-2xl font-semibold tracking-wide">
         Ketelzwart
       </Link>

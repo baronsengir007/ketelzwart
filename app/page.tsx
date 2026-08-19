@@ -9,7 +9,7 @@ export default function Home() {
       <Nav />
 
       {/* Hero: full-bleed photo, serif headline overlapping the frame */}
-      <section className="relative mx-auto max-w-6xl px-6">
+      <section className="relative mx-auto max-w-[1400px] px-6">
         <div className="relative">
           <img
             src="img/hero.jpg"
@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       {/* Teaser: the promise in one line each */}
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-3">
+      <section className="mx-auto grid max-w-[1400px] gap-10 px-6 py-24 md:grid-cols-3">
         <Link href="/beans/" className="group border-t border-rule pt-5">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
             The beans

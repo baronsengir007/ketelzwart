@@ -12,7 +12,7 @@ export default function Roastery() {
   return (
     <main>
       <Nav active="roastery" />
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 pb-24 pt-10 md:grid-cols-[1.2fr_1fr] md:items-start">
+      <section className="mx-auto grid max-w-[1400px] gap-10 px-6 pb-24 pt-10 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div className="md:pr-10">
           <h1 className="font-display text-5xl font-medium leading-tight">
             Twelve kilos at a time, and no more

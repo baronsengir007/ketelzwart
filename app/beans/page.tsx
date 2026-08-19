@@ -40,7 +40,7 @@ export default function Beans() {
   return (
     <main>
       <Nav active="beans" />
-      <section className="mx-auto max-w-6xl px-6 pb-24 pt-10">
+      <section className="mx-auto max-w-[1400px] px-6 pb-24 pt-10">
         <h1 className="font-display text-5xl font-medium">
           Three beans, nothing else
         </h1>
