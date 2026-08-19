@@ -21,6 +21,7 @@ export default function Nav({ active }: { active?: string }) {
       <nav className="flex items-baseline gap-6 text-sm">
         {item("/beans/", "The beans", "beans")}
         {item("/roastery/", "The roastery", "roastery")}
+        {item("/finder/", "Find your bean", "finder")}
         <Link
           href="/visit/"
           className={

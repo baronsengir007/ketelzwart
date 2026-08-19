@@ -6,8 +6,7 @@ export default function Footer() {
           <span className="font-display text-base font-semibold text-ink">
             Ketelzwart
           </span>{" "}
-          is a fictional roastery. This site is a portfolio demonstration
-          built by Rienk Rienks —{" "}
+          is a fictional roastery. A portfolio project by Rienk Rienks -{" "}
           <a
             href="https://github.com/baronsengir007/ketelzwart"
             className="text-wine underline underline-offset-4"

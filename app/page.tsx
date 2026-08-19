@@ -37,10 +37,10 @@ export default function Home() {
               Book a tasting
             </Link>
             <Link
-              href="/beans/"
+              href="/finder/"
               className="text-sm font-bold text-wine underline-offset-4 hover:underline"
             >
-              See the three beans
+              Find your bean in three questions
             </Link>
           </div>
         </div>

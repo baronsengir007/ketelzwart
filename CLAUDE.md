@@ -6,5 +6,5 @@ Publieke portfolio-demo; app/ en public/ zijn standaard Next.js-structuur.
 
 | Taak | Locatie | Laden | Niet laden | Skills |
 |---|---|---|---|---|
-| Site aanpassen | app/ (home), app/beans/, app/roastery/, app/visit/ (paginas), public/img/ (Unsplash-fotos) | README.md (ontwerpverantwoording) | out/, node_modules/ | frontend-design |
+| Site aanpassen | app/ (home), app/beans/, app/roastery/, app/visit/, app/finder/ (paginas), public/img/ (Unsplash-fotos) | README.md (ontwerpverantwoording) | out/, node_modules/ | frontend-design |
 | Publiceren | out/ via `npm run build`, GitHub Pages | README.md | rest | geen |
