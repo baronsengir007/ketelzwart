@@ -33,7 +33,7 @@ export default function Home() {
           <div className="mt-7 flex flex-wrap items-center gap-5">
             <Link
               href="/visit/"
-              className="inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
+              className="press inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
             >
               Book a tasting
             </Link>
@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* Teaser: the promise in one line each */}
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-3">
+      <section data-reveal className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-3">
         <Link href="/beans/" className="group border-t border-rule pt-5">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
             The beans

@@ -51,16 +51,19 @@ export default function Beans() {
         <div className="mt-14 space-y-20">
           {BEANS.map((b, i) => (
             <article
+              data-reveal
               key={b.name}
               className={`grid items-center gap-8 md:grid-cols-2 ${
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <img
-                src={`../img/${b.img}`}
-                alt={b.alt}
-                className="aspect-[4/3] w-full object-cover"
-              />
+              <div className="img-zoom">
+                <img
+                  src={`../img/${b.img}`}
+                  alt={b.alt}
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
               <div>
                 <h2 className="font-display text-3xl font-medium">{b.name}</h2>
                 <p className="mt-1 font-mono text-xs uppercase tracking-wide text-ink-soft">

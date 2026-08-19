@@ -30,7 +30,7 @@ export default function Visit() {
             <div className="mt-7">
               <a
                 href="mailto:hello@ketelzwart.example?subject=Tasting%20reservation"
-                className="inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
+                className="press inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
               >
                 Reserve — Saturday 10:00 or 12:00
               </a>

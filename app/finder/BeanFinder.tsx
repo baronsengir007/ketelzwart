@@ -77,7 +77,7 @@ export default function BeanFinder() {
         <div className="mt-6 flex flex-wrap gap-5">
           <a
             href={r.href}
-            className="inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
+            className="press inline-block border border-wine px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-wine transition-colors hover:bg-wine hover:text-paper"
           >
             See the bean
           </a>

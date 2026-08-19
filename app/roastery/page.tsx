@@ -38,7 +38,7 @@ export default function Roastery() {
         {/* Signature: the roast-log tasting card */}
         <aside
           aria-label="Tasting card from the roast log"
-          className="proefkaart rotate-[1.2deg] border border-rule p-6 font-mono text-sm leading-[28px] shadow-[0_16px_40px_-24px_rgba(28,22,19,0.4)]"
+          className="proefkaart kaart rotate-[1.2deg] border border-rule p-6 font-mono text-sm leading-[28px] shadow-[0_16px_40px_-24px_rgba(28,22,19,0.4)]"
         >
           <div className="flex justify-between text-xs uppercase tracking-wider text-ink-soft">
             <span>Roast log</span>
