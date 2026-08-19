@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-rule">
-      <div className="mx-auto max-w-[1400px] px-6 py-10 text-sm text-ink-soft">
+      <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-ink-soft">
         <p>
           <span className="font-display text-base font-semibold text-ink">
             Ketelzwart

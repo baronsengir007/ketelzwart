@@ -13,7 +13,7 @@ export default function Finder() {
   return (
     <main>
       <Nav active="finder" />
-      <section className="mx-auto max-w-[1400px] px-6 pb-24 pt-10">
+      <section className="mx-auto max-w-6xl px-6 pb-24 pt-10">
         <h1 className="font-display text-5xl font-medium">Find your bean</h1>
         <p className="mt-4 max-w-lg text-ink-soft">
           Three questions about how you actually drink coffee; one honest

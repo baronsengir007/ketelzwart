@@ -8,16 +8,17 @@ export default function Home() {
     <main>
       <Nav />
 
-      {/* Hero: full-bleed photo, serif headline overlapping the frame */}
-      <section className="relative mx-auto max-w-[1400px] px-6">
+      {/* Hero: edge-to-edge photo, headline panel on reading width */}
+      <section className="relative">
         <div className="relative">
           <img
             src="img/hero.jpg"
             alt="Freshly roasted beans pouring from the cooling drum of the roaster"
-            className="h-[62vh] min-h-[420px] w-full object-cover"
+            className="h-[64vh] min-h-[440px] w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent" />
         </div>
+        <div className="mx-auto max-w-6xl px-6">
         <div className="relative -mt-28 max-w-2xl bg-paper p-8 pb-0 sm:ml-10">
           <h1 className="font-display text-5xl font-medium leading-[1.04] sm:text-6xl">
             Born dark,
@@ -44,10 +45,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Teaser: the promise in one line each */}
-      <section className="mx-auto grid max-w-[1400px] gap-10 px-6 py-24 md:grid-cols-3">
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-3">
         <Link href="/beans/" className="group border-t border-rule pt-5">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
             The beans

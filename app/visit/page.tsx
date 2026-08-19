@@ -12,7 +12,7 @@ export default function Visit() {
   return (
     <main>
       <Nav active="visit" />
-      <section className="mx-auto max-w-[1400px] px-6 pb-24 pt-10">
+      <section className="mx-auto max-w-6xl px-6 pb-24 pt-10">
         <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-center">
           <div>
             <h1 className="font-display text-5xl font-medium leading-tight">
