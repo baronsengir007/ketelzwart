@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fcfbf9;
+  --color-ink: #1c1613;
+  --color-ink-soft: #5c534c;
+  --color-wine: #6e1423;
+  --color-rule: #e5e0d8;
+  --color-card: #f5f2ec;
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Tasting card: a torn index card from the roast log */
+.proefkaart {
+  background: var(--color-card);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    var(--color-rule) 27px,
+    var(--color-rule) 28px
+  );
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 2px;
+}
