@@ -14,8 +14,13 @@ export default function Finder() {
     <main>
       <Nav active="finder" />
       <section className="mx-auto max-w-6xl px-6 pb-24 pt-10">
-        <h1 className="font-display text-5xl font-medium">Find your bean</h1>
-        <p className="mt-4 max-w-lg text-ink-soft">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+          Three questions
+        </p>
+        <h1 className="mt-4 font-display text-6xl font-light tracking-[-0.02em]">
+          Find your bean
+        </h1>
+        <p className="mt-5 max-w-lg text-ink-soft">
           Three questions about how you actually drink coffee; one honest
           recommendation from a menu of three.
         </p>

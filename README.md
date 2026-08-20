@@ -42,12 +42,34 @@ Derived decisions:
 - **Three beans, one honest menu**: a considered-choice set of three
   (Hick's law), ordered light to dark, prices visible before any ask.
 - **Type:** Cormorant Garamond (display, true italics), Karla (body),
-  IBM Plex Mono (the tasting card). Motion: none beyond hover: the
-  guide's minimalism demands precision, not animation.
+  IBM Plex Mono (the tasting card). Display weight is 300: at 60-72px a
+  light serif reads as considered where a medium weight reads as loud.
+  Cormorant's figures are old-style by default, so prices set in the
+  display face sit in the line instead of shouting above it.
+- **Depth without decoration.** Section-wide photos sit behind the text
+  at 14% opacity, masked to fade out at both edges (`.veil` in
+  `globals.css`). Measured, not guessed: the softest body text keeps a
+  5.5:1 contrast ratio over the darkest part of the photo, above the
+  4.5:1 AA floor.
+- **Motion is orientation only.** Scroll reveals run 550ms on an
+  ease-out curve, transform and opacity only, and elements inside one
+  group arrive 60ms after each other rather than as a block: the
+  section builds instead of flicking into place. Hover effects sit
+  behind `(hover: hover)`, and `prefers-reduced-motion` renders every
+  section in its final state with no transition at all.
+- **No page is a dead end.** Every subpage closes with one line of
+  sense and one way onward (`NextStep.tsx`), because a page that ends
+  in white space ends the visit too.
 
-Quality floor: responsive, visible focus states, semantic HTML,
-meaningful alt text on every photo, `prefers-reduced-motion` trivially
-satisfied (no animation).
+Deliberately not borrowed from the restaurant sites this was measured
+against: the endless marquee band (an infinite loop in the interface),
+and the cream-plus-serif-plus-terracotta palette the field guide now
+lists as a cliche in its own right.
+
+Quality floor: responsive to 390px with no horizontal overflow, visible
+focus states, semantic HTML, meaningful alt text on content photos and
+`alt=""` on the decorative ones, measured colour contrast,
+`prefers-reduced-motion` respected.
 
 ## Also demonstrated here
 

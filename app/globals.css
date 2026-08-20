@@ -63,10 +63,23 @@ body {
     transform 550ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* Elements in one group arrive after each other, not as a block */
+[data-reveal][data-delay="1"] {
+  transition-delay: 60ms;
+}
+[data-reveal][data-delay="2"] {
+  transition-delay: 120ms;
+}
+[data-reveal][data-delay="3"] {
+  transition-delay: 180ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .press,
-  [data-reveal] {
+  [data-reveal],
+  [data-reveal][data-delay] {
     transition: none;
+    transition-delay: 0ms;
   }
   .press:active {
     transform: none;
@@ -75,6 +88,37 @@ body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* A photo from the roastery sitting far behind the text, fading out at
+   both edges. Pair .veil on the section with .veil-img on a decorative
+   <img> inside it. */
+.veil {
+  position: relative;
+  isolation: isolate;
+}
+.veil-img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.14;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 30%,
+    #000 70%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 30%,
+    #000 70%,
+    transparent
+  );
 }
 
 .img-zoom {

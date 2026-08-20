@@ -20,12 +20,12 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-6xl px-6">
         <div className="relative -mt-28 max-w-2xl bg-paper p-8 pb-0 sm:ml-10">
-          <h1 className="font-display text-5xl font-medium leading-[1.04] sm:text-6xl">
+          <h1 className="font-display text-6xl font-light leading-[1.02] tracking-[-0.02em] sm:text-7xl">
             Born dark,
             <br />
             roasted <em className="text-wine">light</em>.
           </h1>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
             Ketelzwart roasts small batches in Amsterdam-Noord. Every
             Saturday the kettle room is open: taste three beans side by
             side and take home the one that stays with you.
@@ -48,44 +48,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Teaser: the promise in one line each */}
-      <section data-reveal className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-3">
-        <Link href="/beans/" className="group border-t border-rule pt-5">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
-            The beans
-          </p>
-          <h2 className="mt-2 font-display text-2xl font-medium group-hover:text-wine">
-            Three beans, nothing else
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-            Light, medium, darker. Roasted every week, priced openly,
-            ordered light to dark.
-          </p>
-        </Link>
-        <Link href="/roastery/" className="group border-t border-rule pt-5">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
-            The roastery
-          </p>
-          <h2 className="mt-2 font-display text-2xl font-medium group-hover:text-wine">
-            Twelve kilos at a time
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-            Every batch gets a number and a card in the roast log. The
-            card travels with your bag.
-          </p>
-        </Link>
-        <Link href="/visit/" className="group border-t border-rule pt-5">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
-            Saturdays
-          </p>
-          <h2 className="mt-2 font-display text-2xl font-medium group-hover:text-wine">
-            Tasting at the kettle
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-            Three coffees, three brew methods, forty-five minutes. Free,
-            next to the roaster.
-          </p>
-        </Link>
+      {/* Teaser: the promise in one line each, over a faint kettle-room photo */}
+      <section className="veil">
+        <img src="img/beans.jpg" alt="" aria-hidden className="veil-img" />
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-28 md:grid-cols-3">
+          <Link
+            data-reveal
+            href="/beans/"
+            className="group border-t border-rule pt-5"
+          >
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+              The beans
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-light group-hover:text-wine">
+              Three beans, nothing else
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Light, medium, darker. Roasted every week, priced openly,
+              ordered light to dark.
+            </p>
+          </Link>
+          <Link
+            data-reveal
+            data-delay="1"
+            href="/roastery/"
+            className="group border-t border-rule pt-5"
+          >
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+              The roastery
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-light group-hover:text-wine">
+              Twelve kilos at a time
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Every batch gets a number and a card in the roast log. The
+              card travels with your bag.
+            </p>
+          </Link>
+          <Link
+            data-reveal
+            data-delay="2"
+            href="/visit/"
+            className="group border-t border-rule pt-5"
+          >
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+              Saturdays
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-light group-hover:text-wine">
+              Tasting at the kettle
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Three coffees, three brew methods, forty-five minutes. Free,
+              next to the roaster.
+            </p>
+          </Link>
+        </div>
       </section>
 
       <Footer />

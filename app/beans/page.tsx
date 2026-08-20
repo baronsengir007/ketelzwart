@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Nav from "../Nav";
 import Footer from "../Footer";
+import NextStep from "../NextStep";
 
 export const metadata: Metadata = {
   title: "The beans — Ketelzwart",
@@ -41,10 +42,13 @@ export default function Beans() {
     <main>
       <Nav active="beans" />
       <section className="mx-auto max-w-6xl px-6 pb-24 pt-10">
-        <h1 className="font-display text-5xl font-medium">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+          The beans
+        </p>
+        <h1 className="mt-4 font-display text-6xl font-light tracking-[-0.02em]">
           Three beans, nothing else
         </h1>
-        <p className="mt-4 max-w-lg text-ink-soft">
+        <p className="mt-5 max-w-lg text-ink-soft">
           More flavours than three we do not need. Roasted every week,
           ordered light to dark, prices on the shelf and on the site.
         </p>
@@ -65,27 +69,39 @@ export default function Beans() {
                 />
               </div>
               <div>
-                <h2 className="font-display text-3xl font-medium">{b.name}</h2>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wide text-ink-soft">
-                  {b.profile}
+                {/* The light-to-dark order made visible, not just claimed */}
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
+                  {String(i + 1).padStart(2, "0")} / {b.profile.split(" · ")[0]}
+                </p>
+                <h2 className="mt-3 font-display text-4xl font-light tracking-[-0.01em]">
+                  {b.name}
+                </h2>
+                <p className="mt-2 font-mono text-xs uppercase tracking-wide text-ink-soft">
+                  {b.profile.split(" · ").slice(1).join(" · ")}
                 </p>
                 <p className="mt-4 max-w-md leading-relaxed text-ink-soft">
                   {b.body}
                 </p>
-                <p className="mt-4 text-sm font-bold">{b.price}</p>
+                {/* Serif: Cormorant's figures are old-style, so the price
+                    sits in the line instead of shouting above it */}
+                <p className="mt-5 font-display text-xl text-wine">
+                  {b.price}
+                </p>
               </div>
             </article>
           ))}
         </div>
         <p className="mt-16 border-t border-rule pt-6 text-sm text-ink-soft">
-          Bags are roasted to order and picked up at the roastery, or taste
-          all three first at a{" "}
-          <a href="../visit/" className="text-wine underline underline-offset-4">
-            Saturday tasting
-          </a>
-          .
+          Bags are roasted to order and picked up at the roastery.
         </p>
       </section>
+      <NextStep
+        kicker="Not sure which"
+        line="Taste all three side by side before you buy a bag."
+        cta="Book a tasting"
+        href="/visit/"
+        img="../img/pour.jpg"
+      />
       <Footer />
     </main>
   );
