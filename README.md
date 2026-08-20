@@ -51,12 +51,18 @@ Derived decisions:
   `globals.css`). Measured, not guessed: the softest body text keeps a
   5.5:1 contrast ratio over the darkest part of the photo, above the
   4.5:1 AA floor.
-- **Motion is orientation only.** Scroll reveals run 550ms on an
-  ease-out curve, transform and opacity only, and elements inside one
-  group arrive 60ms after each other rather than as a block: the
-  section builds instead of flicking into place. Hover effects sit
-  behind `(hover: hover)`, and `prefers-reduced-motion` renders every
-  section in its final state with no transition at all.
+- **Motion is orientation only, and it cannot hide content.** Scroll
+  reveals are CSS scroll-driven animations (`animation-timeline: view()`),
+  not a JavaScript IntersectionObserver, and they live entirely inside
+  `@supports` and `prefers-reduced-motion: no-preference`. That ordering
+  is the whole point: a browser without support, or a visitor who asked
+  for less motion, never gets the `opacity: 0` starting state at all, so
+  no element can end up permanently invisible. Elements in a group
+  animate over slightly offset scroll ranges, so a section builds rather
+  than flicking into place, and the range closes at 65% of entry so
+  anything properly in frame is fully opaque: never a heading above an
+  empty gap. This replaced an observer-driven version that did exactly
+  that when reveals were applied per element instead of per section.
 - **No page is a dead end.** Every subpage closes with one line of
   sense and one way onward (`NextStep.tsx`), because a page that ends
   in white space ends the visit too.

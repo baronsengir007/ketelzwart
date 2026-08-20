@@ -13,7 +13,11 @@ export default function Roastery() {
   return (
     <main>
       <Nav active="roastery" />
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 pb-24 pt-10 md:grid-cols-[1.2fr_1fr] md:items-start">
+      {/* The kettle room sits behind the page from the first screen, so
+          arriving here feels like the same place as the home page */}
+      <section className="veil">
+        <img src="../img/hero.jpg" alt="" aria-hidden className="veil-img veil-soft" />
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 pb-24 pt-10 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div className="md:pr-10">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
             The roastery
@@ -90,13 +94,14 @@ export default function Roastery() {
           tasted before it went out. Number 214 went out this spring.
         </p>
         </div>
+        </div>
       </section>
       <NextStep
         kicker="Saturdays"
         line="The drum runs while you taste. Come stand next to it."
         cta="Book a tasting"
         href="/visit/"
-        img="../img/hero.jpg"
+        img="../img/scoop.jpg"
       />
       <Footer />
     </main>

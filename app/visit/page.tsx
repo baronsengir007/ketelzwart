@@ -30,7 +30,15 @@ export default function Visit() {
     <main>
       <Nav active="visit" />
 
-      <section className="mx-auto max-w-6xl px-6 pb-20 pt-10">
+      {/* Same room in the background from the first screen */}
+      <section className="veil">
+        <img
+          src="../img/hero.jpg"
+          alt=""
+          aria-hidden
+          className="veil-img veil-soft"
+        />
+        <div className="mx-auto max-w-6xl px-6 pb-20 pt-10">
         <div className="grid gap-12 md:grid-cols-[1.1fr_1fr] md:items-start">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-wine">
@@ -72,6 +80,7 @@ export default function Visit() {
               </div>
             ))}
           </dl>
+        </div>
         </div>
       </section>
 

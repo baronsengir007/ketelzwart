@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Karla, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import RevealInit from "./RevealInit";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -36,7 +35,6 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${karla.variable} ${plexMono.variable} antialiased`}
       >
-        <RevealInit />
         {children}
       </body>
     </html>
