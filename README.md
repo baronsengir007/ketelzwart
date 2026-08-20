@@ -79,6 +79,26 @@ deterministic recommendation function), ending in the roast-log card as
 the result surface. Multi-page routing with shared Nav/Footer components
 and per-page metadata throughout.
 
+## How this was built
+
+Written in Claude Code, but the design decisions come from a fixed
+pipeline rather than from prompting until something looks nice. Two
+reference documents of my own do the deciding: a behavior-driven UI
+method (the five behavioural states and the Behavior Read above) and an
+interface field guide (named layout patterns, style families, and the
+cliches to avoid, refreshed as they rotate). Two Claude Code skills
+execute against those: `design-taste-frontend` for visual direction and
+anti-template discipline, and `emil-design-eng` for the motion rules
+(transform and opacity only, ease-out curves, hover gated behind a
+pointer query, reduced motion respected).
+
+Behaviour outranks aesthetics at every conflict, and every visual
+choice above is traceable back to the Behavior Read. Verification is
+part of the loop, not a final glance: layouts are checked in a real
+browser at desktop and 390px, colour contrast is measured rather than
+eyeballed, and reduced-motion is tested with the media feature actually
+forced on.
+
 ## Photo credits
 
 Photos from Unsplash (free to use under the Unsplash License):
